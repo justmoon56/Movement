@@ -624,55 +624,39 @@ function DFunctions.GetSpeedometer()
 end
 
 function DFunctions.BHOPFunction()
-    if not DConfiguration.Misc.MovementModification.BHOP.Enabled then return end
-
     local speedometer = DFunctions.GetSpeedometer()
-    local char = LocalPlayer.Character
-    if not char then return end
-
+    local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
     local humanoidrootpart = char:FindFirstChild("HumanoidRootPart")
     local humanoid = char:FindFirstChildOfClass("Humanoid")
-    local debounce = 0.01
+    local debounce
 
-    if not humanoidrootpart or not humanoid then return end
+    if not char or not humanoidrootpart or not humanoid then return end
 
     if DConfiguration.Misc.MovementModification.BHOP.SpiderHop and char:GetAttribute("State") == "Wallrunning" then
         pcall(function()
-            if LocalPlayer.PlayerScripts:FindFirstChild("PlayerScriptLoader") then
-                LocalPlayer.PlayerScripts.PlayerScriptLoader.EndJump:Fire()
-                LocalPlayer.PlayerScripts.PlayerScriptLoader.JumpReact:Fire()
-            end
+            LocalPlayer.PlayerScripts.PlayerScriptLoader.EndJump:Fire()
+            LocalPlayer.PlayerScripts.PlayerScriptLoader.JumpReact:Fire()
         end)
     end
 
-    local currentSpeed = tonumber(speedometer.Text) or 0
+    local isR15 = (humanoid.RigType == Enum.HumanoidRigType.R15)
+    local speedNum = tonumber(speedometer.Text) or 0
 
     if DConfiguration.Misc.MovementModification.BHOP.Type == "Acceleration" then
-        if currentSpeed > 60 then
-            if char:FindFirstChild("R15Visual") then
-                DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = 1
-            else
-                DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = -1.05
-            end
+        if speedNum > 60 then
+            DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = isR15 and 2.1 or 0
         else
-            if char:FindFirstChild("R15Visual") then
-                DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = 0.9
-            else
-                DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = -1.10
-            end
+            DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = isR15 and 1.9 or 0
         end
 
         debounce = 0.01
         humanoid.HipHeight = DConfiguration.Misc.MovementModification.BHOP.HipHeight2
-    elseif DConfiguration.Misc.MovementModification.BHOP.Type == "Ground Acceleration" then
-        if char:FindFirstChild("R15Visual") then
-           DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = 0.5
-        else
-           DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = -2
-        end
 
+    elseif DConfiguration.Misc.MovementModification.BHOP.Type == "Ground Acceleration" then
+        DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = isR15 and 1.5 or 0
         humanoid.HipHeight = DConfiguration.Misc.MovementModification.BHOP.HipHeight2
         debounce = 0.01      
+
     elseif DConfiguration.Misc.MovementModification.BHOP.Type == "No Acceleration" then
         debounce = 0.125
     end
@@ -680,11 +664,11 @@ function DFunctions.BHOPFunction()
     local CanBHOPBackwards = true
 
     if DConfiguration.Misc.MovementModification.BHOP.AutoAcceleration then
-        local Threshold = math.clamp(currentSpeed, 25, 50)
-        local Devisor = math.clamp(currentSpeed / Threshold, 0, 6) 
+        local Threshold = math.clamp(speedNum, 25, 50)
+        local Devisor = math.clamp(speedNum / Threshold, 0, 6) 
         local Decrease = math.clamp(5 - (Devisor * 1.7), 0.01, 2)
 
-        if currentSpeed < DConfiguration.Misc.MovementModification.BHOP.MaxSpeed then
+        if speedNum < DConfiguration.Misc.MovementModification.BHOP.MaxSpeed then
             DConfiguration.Misc.PlayerAdjustment.Update.GroundAcceleration = DConfiguration.Misc.MovementModification.BHOP.Acceleration
             CanBHOPBackwards = true
         else 
@@ -696,7 +680,13 @@ function DFunctions.BHOPFunction()
     end
 
     local now = tick()
-    local grounded = (humanoid.FloorMaterial ~= Enum.Material.Air)
+    local lastGrounded = 0
+
+    if humanoid.FloorMaterial ~= Enum.Material.Air then
+        lastGrounded = now
+    end
+
+    local grounded = (now - lastGrounded) < 0.06
 
     if DConfiguration.Misc.MovementModification.BHOP.JumpType == "Simulated" then
         if grounded and (now - DConfiguration.Misc.MovementModification.BHOP.lastTick) > debounce then
@@ -732,19 +722,23 @@ function DFunctions.ResetBHOP()
     local humanoid = char:FindFirstChildOfClass("Humanoid")
 
     if humanoid then
-        humanoid.HipHeight = 0
+        local isR15 = (humanoid.RigType == Enum.HumanoidRigType.R15)
+
+        if isR15 then
+            DConfiguration.Misc.MovementModification.BHOP.HipHeight1 = 2.0
+            DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = 2.0
+        else
+            DConfiguration.Misc.MovementModification.BHOP.HipHeight1 = 0
+            DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = 0
+        end
+
+        humanoid.HipHeight = DConfiguration.Misc.MovementModification.BHOP.HipHeight1
+        DConfiguration.Misc.PlayerAdjustment.Update.GroundAcceleration = 5
+        task.wait(0.3)
         DConfiguration.Misc.PlayerAdjustment.Update.GroundAcceleration = 5
         DFunctions.setBhopEnabled(false)
     end
 end
-
-RunService.Heartbeat:Connect(function()
-    if DConfiguration.Misc.MovementModification.BHOP.Enabled == true then
-        pcall(DFunctions.BHOPFunction)
-    elseif DConfiguration.Misc.MovementModification.BHOP.Enabled == false then
-        pcall(DFunctions.ResetBHOP)
-    end
-end)
 
 local Toggle = Tabs.Misc:AddToggle("BHOPToggle", { Title = "BHOP (Button)", Default = false })
 
@@ -859,11 +853,6 @@ local ToggleSpider = Tabs.Misc:AddToggle("SpiderHop", {Title = "Spider Hop V1", 
 ToggleSpider:OnChanged(function(State)
     DConfiguration.Misc.MovementModification.BHOP.SpiderHop = State
 end)
-
-Tabs.Misc:AddParagraph({
-    Title = "Spider Hop V2 Soon...",
-    Content = ""
-})
 
 Tabs.Misc:AddInput("BHOPAcceleration", {
     Title = "BHOP Acceleration",

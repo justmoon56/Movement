@@ -1,1 +1,900 @@
-return({i=(function()local function m(i,j,k)if j>k then return end return i[j],m(i,j+1,k)end return function(o)return m(o[1],1,o[0b10])end end)(),function(g,m)return function(h)local i,n,j,l,e,k,b,d,p,_,c,f,o c=0x38 repeat if c>0b10101000 then b,k,_,l=i,m[0b11][1][m[0b11][0b10]],0x18,m[0b10][1][m[0b10][0b10]]k=k(b,_)j,b,_,o=0x10,m[1][1][m[1][0b10]],m[0b11][1][m[0b11][0b10]],i _=_(o,j)o=0xff b=b(_,o)_,o,p,j=m[1][1][m[1][0b10]],m[0b11][1][m[0b11][0b10]],0b1000,i o=o(j,p)j=0xff _=_(o,j)j,p,o=i,0b11111111,m[1][1][m[1][0b10]]o=g.h(o(j,p))l=g.h(l(k,b,_,g.i(o)))return g.i(l)elseif c>=0x78 then if c>0x78 then l=l+b c=(b>0 and l>k or b<=0 and l<k or b~=b)and 0x7f50/c or 0x78 else j=0x55 e,j,f,o,n,d=l,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&()*+-;<=>?@^_`{|}~",h.sub,i*j,l,h f=f(d,e,n)d,j,e,p=1,j.find,true,j j=j(p,f,d,e)_,o=o+j,1 c,i=0b100100000-c,_-o end else i,l,k=0,1,0b101 b=l c=(k~=k or(b>0 and l>k or(b<=0 or b~=b)and l<k))and 0b11000010 or 0b1111000 end until false end end,function(g)local f,h,e,a a=string h,e,a=a.char,a.byte,bit32 f=a.bxor h={[0b10]=0b11,[0b11]=h}h[1]=h e={[0b10]=0b11,[0b11]=e}e[1]=e f={[0b10]=0b11,[0b11]=f}f[1]=f a=g:n{e,h,f}return a end,{},h=function(...)return{[1]={...},[0b10]=select("#",...)}end,function(a,...)a.q,a.m=a:q(),a:m()return a:k()(...)end,function(g)local b,h,a,f,i f=string i,h=f.gsub,f.char h={[0b10]=0b11,[0b11]=h}h[1]=h i={[0b10]=0b11,[0b11]=i}i[1]=i b=bit32 f,a=b.rshift,b.band f={[0b10]=0b11,[0b11]=f}f[1]=f a={[0b10]=0b11,[0b11]=a}a[1]=a b=g:r{h,f,a,i}return b end,function(g,d)return function(h)local k,b,i,c,l,_,j,e c=0b1011111 while true do if c<0b1010100 then if c<=0x38 then if c>0b11 then _,k,b,l=g:s{d[0b11],d[1],d[0b10]},h,".....",d[0b100][1][d[0b100][0b10]]l=l(k,b,_)b,_=1,0 _=i>_ c=_ and 0b11000101 or 0x54 else b,l=0b101,"~"l,b,c,k=l.rep,b-i,0xa8/c,l l=l(k,b)h=h..l end else c,_=0x92,-1 end elseif c<=0b10010010 then if c>0x5f then k,l=l,l.sub l=g.h(l(k,b,_))return g.i(l)elseif c>0x54 then k,l=0b101,#h l,i=0,l%k c=i>l and 0b11 or 0x38 else c=_ and c+0x3e or 0x3e end else j=0b101 c,e=0x54,j-i e,_=1,-e _=_-e end end end end,function(a,b,c,d)a.F[d]=a.m(b,c)return a.F[d]end,l=function(g,i,l,...)local h,n,k,b,d,q,p,o,f,j,_,e q=0xe2 repeat if q>=0xaf then if q>0b11001010 then if q<=0b11100010 then if q>0xe0 then k,b,j,h=#i,0,1,g o,_=j,k-j q=_~=_ and 0xe0 or 0xb4 else q,o,_,b=0x78,g.h(...),h,h[l]end else q=o~=o and 0xaf or 0b10100011 end elseif q>=0b10111101 then if q<=0b10111101 then q=b>_ and 0xa560/q or q+-0b1010010 else q=b<_ and 0xe0 or 0xa9 end elseif q>0xaf then q=o>0 and 0x36d8/q or 0x1a5-q else q=b<_ and 0x18f-q or 0b1111011 end elseif q<=0b1111000 then if q<0b1110000 then if q<=0x4e then q=b>_ and 0b100101110-q or 0x13f-q else q=o<=0 and q+0x5f or 0b10101001 end elseif q>0x70 then b=g.h(b(_,g.i(o)))return g.i(b)else b=b+o q=o>0 and 0xbd or 0x2ed0/q end elseif q<0b10100011 then q,n=0x35d0/q,0x18737 e,n=n*b,0x417b d=e+n d,f=1,d%k p=f+d f,j=b+d,i[p]p=h[f]h[j]=p elseif q<=0b10100011 then q=o<=0 and 0b10101111 or 0x7b else q=o~=o and 0b11100000 or 0x124-q end until false end,function(g)return function(...)local c,a,e,_,f c=0xc6 repeat if c<=0xb6 then if c<=0xab then if c>0x58 then _()return else c,e=c+0b1011110,g.h(e(f,a))end else c,_=0xab,_(g.i(e))end else e,a,c,_=g._[g.F[-0x5fd2]or g:G(g.q"%$~-Y",g.q"tN#",-0x5fd2)],g.F[0x6957]or g:G(g.q"J4EfU1S{&NQ!BW*YX%=G0SzI*x<b&mfB#nQU*wh9L?aT$)@``_UdN}yk~IyWh2*_!(z06RR_+qV6;!GPow#cW`0-CB_U#6G`}}GX7b!*?B7>?Hz_)UuM!p81kK0dw44#{Pt?&e!s=<;k52t~)>u7|s4YmNMHHA<Nf=9^u",g.q"Q!tspcM-*iG(yYFMPYVcX?R1m$tR-J5RoE_F_62uD^5MEqaMtWF{sJ*q#8bxwbkBUv(P@!W{7m~BxA@jrHT",0x6957),0b1011000,g._[g.F[-0x5a33]or g:G(g.q"t}%5M*S0Ku9K!",g.q"!d?_|qy",-0x5a33)]e,f=e.HttpGet,e end until false end end,getfenv(),function(g,m)return function(h,i)local o,j,p,l,k,d,e,_,f,n,q,b q=0b111000 repeat if q<=0x67 then if q<=0b111000 then if q<0x17 then if q>1 then q=k<b and 0b1101000 or q+0b110 else q=k>b and 0b1101000 or q+0x38 end elseif q>0x35 then j,k,o,l=1,0,#h,""_,b=j,o-j q=b~=b and 0b1101000 or 0b110101 elseif q>0b10111 then q=_>0 and 0b11100001 or 0xfc else q=_~=_ and 0x68 or 0b1011111-q end elseif q>=0b1010111 then if q<=0b1010111 then o=o(g.i(j))q,l=0x444f/q,l..o else q=_<=0 and 0b1111100 or 0b1001000 end elseif q<=0b111001 then q=_<=0 and q+-0b101000 or 0x51f/q else j,f,p,o,d=m[0b11][1][m[0b11][0b10]],h,m[1][1][m[1][0b10]],m[0b10][1][m[0b10][0b10]],1 q,d=0xb8,k+d end elseif q>0b10111100 then if q>=0b11100001 then if q<=0b11100001 then q=k>b and 0x68 or 0xfc else q=_~=_ and 0x7a10/q or q+-0x95 end else k=k+_ q=_>0 and 0b11001001/q or 0x102-q end elseif q<=0b10100110 then if q<0b1111100 then return l elseif q>0b1111100 then q,f=q+0b10110,g.h(f(d,e))else q=k<b and 0b11100100-q or q+-0x34 end elseif q>0b10111000 then q,j=0x57,g.h(j(p,g.i(f)))else p=p(f,d)d,f,n=i,m[1][1][m[1][0b10]],#i q,n,e=q+-0x12,1,k%n e=e+n end until false end end}):l({"k","_","n","s","m","F","H","q","r","G"},"H",...)
+-- Global Services
+local Workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local Lighting = game:GetService('Lighting')
+local StarterGui = game:GetService("StarterGui")
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+local Camera = Workspace.CurrentCamera
+local LocalPlayer = Players.LocalPlayer
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local PathfindingService = game:GetService("PathfindingService")
+local CAS = game:GetService("ContextActionService")
+local CoreGui = game:GetService("CoreGui")
+local Stats = game:GetService("Stats")
+
+local FluentModify = loadstring(game:HttpGet("https://raw.githubusercontent.com/justmoon56/FluentModify/refs/heads/main/CoreNotify/NewCustomNotify.lua"))()
+
+if _G.FluentModifyIsAlreadyRunning then
+    FluentModify:CustomNotify({
+        Title = "Interface",
+        Content = "Callback error", 
+        SubContent = "Script is already running!",
+        Type = "Error",
+        Duration = 3
+     })
+    return
+end
+
+_G.FluentModifyIsAlreadyRunning = true
+
+local Fluent = loadstring(game:HttpGet("https://github.com/justmoon56/FluentModify/releases/download/V1.4.1/FluentTesting"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "Bhop",
+    SubTitle = "Open Source",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(540, 390),
+    Acrylic = true,
+    Theme = "Deep Ocean",
+    MinimizeKey = Enum.KeyCode.LeftControl,
+    Search = false,
+})
+
+local Tabs = {
+    Misc = Window:AddTab({ Title = "Movement", Icon = "rbxassetid://7734068321" })
+}
+
+local Options = Fluent.Options
+
+-- Optimize (1)
+local function GetAutoDuration()
+    local dt = RunService.RenderStepped:Wait()
+    local fps = 1 / dt
+    local duration = 900 / math.clamp(fps, 5, 900)
+    return math.clamp(duration, 1, 9)
+end
+
+local Duration = GetAutoDuration()
+local AssetsIcon = "rbxassetid://98607076307819"
+
+local function MakeDraggable(topbarobject, object, locked)
+    local Dragging = false
+    local DragInput, DragStart, StartPosition
+    local Holding = false
+    local HoldTime = 1.0
+    local MoveCancelThreshold = 6
+    local HoldToken = 0
+    object:SetAttribute("Locked", locked or false)
+
+    local function Update(input)
+        if object:GetAttribute("Locked") then return end
+        local delta = input.Position - DragStart
+        object.Position = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + delta.Y)
+    end
+
+    local function ToggleLock()
+        local newState = not object:GetAttribute("Locked")
+        object:SetAttribute("Locked", newState)
+        Fluent:Notify({Title = newState and "Button Locked" or "Button Unlocked", Content = newState and "This button is now locked in place." or "This button can now be moved.", Duration = 2})
+    end
+
+    topbarobject.InputBegan:Connect(function(input)
+        if input.UserInputType ~= Enum.UserInputType.MouseButton1 and input.UserInputType ~= Enum.UserInputType.Touch then return end
+        Dragging = not object:GetAttribute("Locked")
+        Holding = true
+        DragStart = input.Position
+        StartPosition = object.Position
+        HoldToken += 1
+        local token = HoldToken
+        task.delay(HoldTime, function() if Holding and token == HoldToken then ToggleLock() end end)
+        input.Changed:Connect(function() if input.UserInputState == Enum.UserInputState.End then Dragging = false; Holding = false end end)
+    end)
+
+    topbarobject.InputChanged:Connect(function(input)
+        if not DragStart then return end
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            if (input.Position - DragStart).Magnitude > MoveCancelThreshold then Holding = false end
+            DragInput = input
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input) if input == DragInput and Dragging then Update(input) end end)
+end
+
+local openGui = Instance.new("ScreenGui")
+openGui.Name = "openGui"
+openGui.Parent = CoreGui
+openGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+openGui.ResetOnSpawn = false
+
+local mainopen = Instance.new("TextButton")
+mainopen.Name = "mainopen"
+mainopen.Parent = openGui
+mainopen.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+mainopen.BackgroundTransparency = 1
+mainopen.Position = UDim2.new(0.101969875, 0, 0.110441767, 0)
+mainopen.Size = UDim2.new(0, 64, 0, 42)
+mainopen.Text = ""
+mainopen.Visible = true
+
+local mainopens = Instance.new("UICorner")
+mainopens.Parent = mainopen
+
+local frontImage = Instance.new("ImageLabel")
+frontImage.Name = "StaticIcon"
+frontImage.Parent = mainopen
+frontImage.Size = UDim2.new(0.94, 0, 2, 0)
+frontImage.Position = UDim2.new(0.5, 0, 0.5, 0)
+frontImage.AnchorPoint = Vector2.new(0.5, 0.5)
+frontImage.BackgroundTransparency = 1
+frontImage.Image = AssetsIcon
+frontImage.ScaleType = Enum.ScaleType.Fit
+frontImage.ZIndex = 2
+
+local frontCorner = Instance.new("UICorner")
+frontCorner.CornerRadius = UDim.new(0.2, 0)
+frontCorner.Parent = frontImage
+
+local frame = Instance.new("Frame")
+frame.Name = "GradientFrame"
+frame.Size = frontImage.Size
+frame.Position = frontImage.Position
+frame.AnchorPoint = frontImage.AnchorPoint
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.BackgroundTransparency = 0.7
+frame.Parent = mainopen
+
+local aspectConstraint = Instance.new("UIAspectRatioConstraint")
+aspectConstraint.AspectRatio = 1
+aspectConstraint.AspectType = Enum.AspectType.FitWithinMaxSize
+aspectConstraint.DominantAxis = Enum.DominantAxis.Width
+aspectConstraint.Parent = frame
+
+local frameCorner = Instance.new("UICorner")
+frameCorner.CornerRadius = frontCorner.CornerRadius
+frameCorner.Parent = frame
+
+-- Gradient Variables Fallback
+getgenv().ButtonGradients = getgenv().ButtonGradients or {
+    Background = ColorSequence.new(Color3.fromRGB(40, 40, 40), Color3.fromRGB(20, 20, 20)),
+    Stroke = ColorSequence.new(Color3.fromRGB(255, 255, 255), Color3.fromRGB(100, 100, 100))
+}
+
+local gradient = Instance.new("UIGradient")
+gradient.Color = getgenv().ButtonGradients.Background
+gradient.Parent = frame
+
+task.spawn(function()
+    while frame.Parent do
+        gradient.Rotation = (gradient.Rotation + 1) % 360
+        gradient.Color = getgenv().ButtonGradients.Background
+        task.wait(0.03)
+    end
+end)
+
+local Stroke = Instance.new("UIStroke")
+Stroke.Thickness = 2
+Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Stroke.Color = Color3.new(1, 1, 1)
+Stroke.Parent = frame
+
+local gradientstroke = Instance.new("UIGradient")
+gradientstroke.Color = getgenv().ButtonGradients.Stroke
+gradientstroke.Rotation = 0
+gradientstroke.Parent = Stroke
+
+task.spawn(function()
+    while frame.Parent do
+       gradientstroke.Rotation = (gradientstroke.Rotation + 0.5) % 360
+       gradientstroke.Color = getgenv().ButtonGradients.Stroke
+       task.wait()
+    end
+end)
+
+MakeDraggable(mainopen, mainopen, false)
+
+mainopen.MouseButton1Click:Connect(function()
+    Window:Minimize()
+end)
+
+local DFunctions = {}
+local CurrentAdjustment = {}
+local DConfiguration = {
+    Misc = {
+        PlayerAdjustment = {
+            Default = {
+                Speed = 1500,
+                JumpHeight = 3,
+                JumpCap = 1,
+                JumpAcceleration = 1.5,
+                AirStrafe = 182,
+                GroundAcceleration = 5,
+            },
+            Update = {
+                Speed = 1500,
+                JumpHeight = 3,
+                JumpCap = 1,
+                JumpAcceleration = 1.5,
+                AirStrafe = 182,
+                GroundAcceleration = 5,
+            },
+            Saved = {
+                Speed = 1500,
+                JumpHeight = 3,
+                JumpCap = 1,
+                JumpAcceleration = 1.5,
+                AirStrafe = 182,
+                GroundAcceleration = 5,
+            },
+            Tick = {
+                Speed = 0,
+                JumpHeight = 0,
+                JumpCap = 0,
+                JumpAcceleration = 0,
+                AirStrafe = 0,
+                GroundAcceleration = 0,
+            },
+            Debounce = {
+                Speed = false,
+                JumpHeight = false,
+                JumpCap = false,
+                JumpAcceleration = false,
+                AirStrafe = false,
+                GroundAcceleration = false,
+            },
+        },
+        Humanoids = {
+            WalkspeedCF = false,
+            OriginalJumpHeight = false,
+            CF = 5,
+            JP = 20,
+        },
+        Utilities = {
+            GetCurrentSpeed = 0,
+            BounceModification = {
+                Enabled = false,
+                DefaultBounce = 80,
+                EmoteBounce = 120,
+                SuperBounce = false,
+                SuperBounceStrength = -50,
+            },
+            EdgeTrimpModification = {
+                Enabled = false,
+                HeightMultiplier = 1.5,
+                DownThreshold = 4.5
+            },
+            LagSwitch = {
+                MSDelay = 200,
+                Mode = "Normal",
+            },
+        },
+        CameraAdjustment = {
+            StretchX = 1,
+            StretchY = 1,
+        },
+        GunAdjustment = {
+            v = nil,
+        },
+        GameAutomation = {
+            Revive = {
+                Enabled = false,
+                FloatingButton = false,
+                Keybind = false,
+                WhileEmote = false,
+                Delay = 0.1,
+            },
+            Carry = {
+                Enabled = false,
+                FloatingButton = false,
+                Keybind = false,
+                WhileEmote = false,
+            },
+            Macro = {
+                SelectedEmote = "BoldMarch",
+                FloatingButton = false,
+                Keybind = false,
+            },
+        },
+        MovementModification = {
+            AggressiveEmoteDash = {
+                Enabled = false,
+                Type = "Blatant",
+                Speed = 3000,
+                Acceleration = -2,
+            },
+            SlideModification = {
+                FloatingButton = false,
+                Enabled = false,
+                Acceleration = -3,
+            },
+            Gravity = {
+                FloatingButton = false,
+                Keybind = false,
+                Value = 10,
+            },
+            BHOP = {
+                Enabled = false,
+                Keybind = false,
+                FloatingButton = false,
+                AutoAcceleration = false,
+                MaxSpeed = 70,
+                SpiderHop = false,
+                Backwards = false,
+                JumpButton = false,
+                HipHeight1 = 0,
+                HipHeight2 = 0,
+                Type = "Acceleration",
+                JumpType = "Simulated",
+                Acceleration = -0.1,
+                lastTick = 0.01,
+            },
+        },
+    },
+    Visual = {
+        OriginalCosmetics = {
+            Cosmetics1 = "", Cosmetics2 = "", Cosmetics3 = "", Cosmetics4 = "",
+        },
+        ModifyCosmetics = {
+            Cosmetics1 = "", Cosmetics2 = "", Cosmetics3 = "", Cosmetics4 = "",
+        },
+        OriginalEmotes = {
+            Emote1 = "", Emote2 = "", Emote3 = "", Emote4 = "", Emote5 = "", Emote6 = "",
+            Emote7 = "", Emote8 = "", Emote9 = "", Emote10 = "", Emote11 = "", Emote12 = "",
+        },
+        ModifyEmotes = {
+            Emote1 = "", Emote2 = "", Emote3 = "", Emote4 = "", Emote5 = "", Emote6 = "",
+            Emote7 = "", Emote8 = "", Emote9 = "", Emote10 = "", Emote11 = "", Emote12 = "",
+        },
+    },
+    Settings = {
+        GuiScale = {
+            Respawn = 0, SuperBounce = 0, AutoCarry = 0, InstantRevive = 0, AutoEmoteDash = 0,
+            Gravity = 0, InfiniteSlide = 0, AutoJump = 0, AutoCrouch = 0, LagSwitch = 0,
+        },
+    },
+}
+
+-- Functions
+
+function DFunctions.CreateButton(ButtonName, Name, Size1, Size2, ScriptLogic, CircleMode)
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = ButtonName
+    screenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+    screenGui.ResetOnSpawn = false
+
+    local frame = Instance.new("Frame")
+    frame.Name = ButtonName
+    frame.Size = UDim2.new(Size1, 0, Size2, 0)
+    frame.Position = UDim2.new(0.5 - Size1 / 2, 0, 0.5 - Size2 / 2, 0)
+    frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    frame.BackgroundTransparency = 0.7
+    frame.Parent = screenGui
+
+    local gradient = Instance.new("UIGradient")
+    gradient.Color = getgenv().ButtonGradients.Background
+    gradient.Parent = frame
+
+    task.spawn(function()
+        while frame and frame.Parent do
+            gradient.Rotation = (gradient.Rotation + 1) % 360
+            gradient.Color = getgenv().ButtonGradients.Background
+            task.wait(0.03)
+        end
+    end)
+
+    local Stroke = Instance.new("UIStroke")
+    Stroke.Thickness = 2
+    Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    Stroke.Color = Color3.new(1, 1, 1)
+    Stroke.Parent = frame
+
+    local gradientstroke = Instance.new("UIGradient")
+    gradientstroke.Color = getgenv().ButtonGradients.Stroke
+    gradientstroke.Rotation = 0
+    gradientstroke.Parent = Stroke
+
+    task.spawn(function()
+        while frame and frame.Parent do
+           gradientstroke.Rotation = (gradientstroke.Rotation + 0.5) % 360
+           gradientstroke.Color = getgenv().ButtonGradients.Stroke
+           task.wait(0.05)
+        end
+    end)
+
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 15)
+    corner.Parent = frame
+
+    local button = Instance.new("TextButton")
+    button.Size = UDim2.new(1, 0, 1, 0)
+    button.BackgroundTransparency = 1
+    button.Text = Name
+    button.Font = Enum.Font.SourceSansBold
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.TextSize = 24
+    button.Parent = frame
+
+    local toggle = Instance.new("TextButton")
+    toggle.Name = "CircleToggle"
+    toggle.Size = UDim2.new(0, 28, 0, 28)
+    toggle.Position = UDim2.new(1, 6, 0.5, -14)
+    toggle.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    toggle.Text = "○"
+    toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+    toggle.Visible = false
+    toggle.Parent = frame
+
+    local tc = Instance.new("UICorner")
+    tc.CornerRadius = UDim.new(1, 0)
+    tc.Parent = toggle
+
+    local transToggle = Instance.new("ImageButton")
+    transToggle.Name = "TransparencyToggle"
+    transToggle.Size = UDim2.new(0, 28, 0, 28)
+    transToggle.Position = UDim2.new(0, -34, 0.5, -14)
+    transToggle.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    transToggle.Image = "rbxassetid://90339998542392"
+    transToggle.ScaleType = Enum.ScaleType.Fit
+    transToggle.Visible = false
+    transToggle.Parent = frame
+
+    local transCorner = Instance.new("UICorner")
+    transCorner.CornerRadius = UDim.new(1, 0)
+    transCorner.Parent = transToggle
+
+    local originalSize = UDim2.new(Size1, 0, Size2, 0)
+    local holding = false
+    local holdStart = 0
+    local hideAt = 0
+
+    frame:SetAttribute("IsCircle", false)
+    frame:SetAttribute("IsTransparency", false)
+
+    local isCircle = (CircleMode ~= nil) and CircleMode or frame:GetAttribute("IsCircle")
+
+    local function applyShape(circle)
+        frame:SetAttribute("IsCircle", circle)
+        local s = math.min(frame.AbsoluteSize.X, frame.AbsoluteSize.Y)
+        if circle then
+            frame.Size = UDim2.new(0, s, 0, s)
+            button.TextWrapped = true
+            button.TextScaled = true
+            button.TextSize = math.floor(s * 0.45)
+            corner.CornerRadius = UDim.new(1, 0)
+            toggle.Text = "▢"
+        else
+            frame.Size = originalSize
+            button.TextWrapped = false
+            button.TextScaled = false
+            button.TextSize = 24
+            corner.CornerRadius = UDim.new(0, 15)
+            toggle.Text = "○"
+        end
+    end
+
+    local function applyTransparency(transparent)
+        frame:SetAttribute("IsTransparency", transparent)
+        if transparent then
+            frame.BackgroundTransparency = 1
+            Stroke.Enabled = false
+            button.TextTransparency = 1
+        else
+            frame.BackgroundTransparency = 0.7
+            Stroke.Enabled = true
+            button.TextTransparency = 0
+        end
+    end
+
+    applyShape(isCircle)
+    applyTransparency(false)
+
+    task.spawn(function()
+        while frame and frame.Parent do
+            if (toggle.Visible or transToggle.Visible) and os.clock() - hideAt >= 10 then
+                toggle.Visible = false
+                transToggle.Visible = false
+            end
+            task.wait(0.25)
+        end
+    end)
+
+    button.InputBegan:Connect(function(i)
+        if i.UserInputType == Enum.UserInputType.MouseButton1 or i.UserInputType == Enum.UserInputType.Touch then
+            holding = true
+            holdStart = os.clock()
+        end
+    end)
+
+    button.InputEnded:Connect(function(i)
+        if holding and (i.UserInputType == Enum.UserInputType.MouseButton1 or i.UserInputType == Enum.UserInputType.Touch) then
+            holding = false
+            if os.clock() - holdStart >= 0.6 then
+                toggle.Visible = true
+                transToggle.Visible = true
+                hideAt = os.clock()
+            end
+        end
+    end)
+
+    toggle.MouseButton1Click:Connect(function()
+        hideAt = os.clock()
+        applyShape(not frame:GetAttribute("IsCircle"))
+    end)
+
+    transToggle.MouseButton1Click:Connect(function()
+        hideAt = os.clock()
+        applyTransparency(not frame:GetAttribute("IsTransparency"))
+    end)
+
+    button.Activated:Connect(function()
+        if ScriptLogic then
+            ScriptLogic(button)
+        end
+    end)
+
+    MakeDraggable(button, frame, false)
+
+    return button
+end
+
+function DFunctions.UpdateButton(Name, Size1, Size2)
+    local gui = LocalPlayer.PlayerGui:FindFirstChild(Name)
+    if gui and gui:FindFirstChild(Name) then
+        gui[Name].Size = UDim2.new(Size1, 0, Size2, 0)
+    end
+end
+
+function DFunctions.DestroyButton(Name)
+    local gui = LocalPlayer.PlayerGui:FindFirstChild(Name)
+    if gui then
+        gui:Destroy()
+    end
+end
+
+function DFunctions.GetAdjustments()
+    table.clear(CurrentAdjustment)
+    local character = LocalPlayer.Character
+    if not character then return end
+
+    if getgc then
+        for _, v in pairs(getgc(true)) do
+            if type(v) == "table" then
+                local char = rawget(v, "Character")
+                local moveStats = rawget(v, "MoveStats")
+
+                if typeof(char) == "Instance" and char == character then
+                    if type(moveStats) == "table" then
+                        if not table.find(CurrentAdjustment, moveStats) then
+                            table.insert(CurrentAdjustment, moveStats)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
+function DFunctions.setTFriction(newFriction)
+    local now = tick()
+    if DConfiguration.Misc.PlayerAdjustment.Default.GroundAcceleration ~= newFriction and now - (DConfiguration.Misc.PlayerAdjustment.Tick.GroundAcceleration or 0) >= 0.1 then
+        DConfiguration.Misc.PlayerAdjustment.Default.GroundAcceleration = newFriction
+        DConfiguration.Misc.PlayerAdjustment.Tick.GroundAcceleration = now
+
+        for i = 1, #CurrentAdjustment do
+            local stats = CurrentAdjustment[i]
+            if rawget(stats, "Friction") then
+                rawset(stats, "Friction", newFriction)
+            end
+        end
+    end
+end
+
+function DFunctions.setBhopEnabled(bool)
+    DConfiguration.Misc.MovementModification.BHOP.Enabled = bool
+
+    for i = 1, #CurrentAdjustment do
+        local stats = CurrentAdjustment[i]
+        if rawget(stats, "BhopEnabled") ~= nil then rawset(stats, "BhopEnabled", bool) end
+        if rawget(stats, "AutoBhop") ~= nil then rawset(stats, "AutoBhop", bool) end
+        if rawget(stats, "EndJump") ~= nil then rawset(stats, "EndJump", bool) end
+        if rawget(stats, "JumpReact") ~= nil then rawset(stats, "JumpReact", bool) end
+    end
+end
+
+function DFunctions.GetSpeedometer()
+    local pcallSuccess, speedometer = pcall(function()
+        local shared = LocalPlayer.PlayerGui:WaitForChild("Shared", 2)
+        return shared.HUD.Overlay.Default.CharacterInfo.Item:WaitForChild("Speedometer", 2).Players
+    end)
+
+    if pcallSuccess and speedometer then
+        return speedometer
+    end
+
+    local char = LocalPlayer.Character
+    if char and char:FindFirstChild("HumanoidRootPart") then
+        local vel = char.HumanoidRootPart.AssemblyLinearVelocity
+        local spd = math.floor(Vector3.new(vel.X, 0, vel.Z).Magnitude)
+        return { Text = tostring(spd) }
+    end
+
+    return { Text = "0" }
+end
+
+function DFunctions.BHOPFunction()
+    if not DConfiguration.Misc.MovementModification.BHOP.Enabled then return end
+
+    local speedometer = DFunctions.GetSpeedometer()
+    local char = LocalPlayer.Character
+    if not char then return end
+
+    local humanoidrootpart = char:FindFirstChild("HumanoidRootPart")
+    local humanoid = char:FindFirstChildOfClass("Humanoid")
+    local debounce = 0.01
+
+    if not humanoidrootpart or not humanoid then return end
+
+    if DConfiguration.Misc.MovementModification.BHOP.SpiderHop and char:GetAttribute("State") == "Wallrunning" then
+        pcall(function()
+            if LocalPlayer.PlayerScripts:FindFirstChild("PlayerScriptLoader") then
+                LocalPlayer.PlayerScripts.PlayerScriptLoader.EndJump:Fire()
+                LocalPlayer.PlayerScripts.PlayerScriptLoader.JumpReact:Fire()
+            end
+        end)
+    end
+
+    local currentSpeed = tonumber(speedometer.Text) or 0
+
+    if DConfiguration.Misc.MovementModification.BHOP.Type == "Acceleration" then
+        if currentSpeed > 60 then
+            if char:FindFirstChild("R15Visual") then
+                DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = 1
+            else
+                DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = -1.05
+            end
+        else
+            if char:FindFirstChild("R15Visual") then
+                DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = 0.9
+            else
+                DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = -1.10
+            end
+        end
+
+        debounce = 0.01
+        humanoid.HipHeight = DConfiguration.Misc.MovementModification.BHOP.HipHeight2
+    elseif DConfiguration.Misc.MovementModification.BHOP.Type == "Ground Acceleration" then
+        if char:FindFirstChild("R15Visual") then
+           DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = 0.5
+        else
+           DConfiguration.Misc.MovementModification.BHOP.HipHeight2 = -2
+        end
+
+        humanoid.HipHeight = DConfiguration.Misc.MovementModification.BHOP.HipHeight2
+        debounce = 0.01      
+    elseif DConfiguration.Misc.MovementModification.BHOP.Type == "No Acceleration" then
+        debounce = 0.125
+    end
+
+    local CanBHOPBackwards = true
+
+    if DConfiguration.Misc.MovementModification.BHOP.AutoAcceleration then
+        local Threshold = math.clamp(currentSpeed, 25, 50)
+        local Devisor = math.clamp(currentSpeed / Threshold, 0, 6) 
+        local Decrease = math.clamp(5 - (Devisor * 1.7), 0.01, 2)
+
+        if currentSpeed < DConfiguration.Misc.MovementModification.BHOP.MaxSpeed then
+            DConfiguration.Misc.PlayerAdjustment.Update.GroundAcceleration = DConfiguration.Misc.MovementModification.BHOP.Acceleration
+            CanBHOPBackwards = true
+        else 
+            DConfiguration.Misc.PlayerAdjustment.Update.GroundAcceleration = Decrease
+            CanBHOPBackwards = false
+        end
+    else
+        DConfiguration.Misc.PlayerAdjustment.Update.GroundAcceleration = DConfiguration.Misc.MovementModification.BHOP.Acceleration
+    end
+
+    local now = tick()
+    local grounded = (humanoid.FloorMaterial ~= Enum.Material.Air)
+
+    if DConfiguration.Misc.MovementModification.BHOP.JumpType == "Simulated" then
+        if grounded and (now - DConfiguration.Misc.MovementModification.BHOP.lastTick) > debounce then
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            DConfiguration.Misc.MovementModification.BHOP.lastTick = now
+        end
+    elseif DConfiguration.Misc.MovementModification.BHOP.JumpType == "Realistic" then
+        if grounded and (now - DConfiguration.Misc.MovementModification.BHOP.lastTick) > debounce then
+            pcall(function()
+                LocalPlayer.PlayerScripts.PlayerScriptLoader.EndJump:Fire()
+                LocalPlayer.PlayerScripts.PlayerScriptLoader.JumpReact:Fire()
+            end)
+            DConfiguration.Misc.MovementModification.BHOP.lastTick = now
+        end
+    end
+
+    if DConfiguration.Misc.MovementModification.BHOP.Backwards then
+        local look = humanoidrootpart.CFrame.LookVector
+        local vel = humanoidrootpart.AssemblyLinearVelocity
+
+        local movingBackwards = (vel.Magnitude > 0 and look:Dot(vel.Unit) < -0.45)
+
+        if movingBackwards then
+            DFunctions.setBhopEnabled(CanBHOPBackwards)
+            RunService.Heartbeat:Wait()
+            DFunctions.setBhopEnabled(false)
+        end
+    end
+end
+
+function DFunctions.ResetBHOP()
+    local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+    local humanoid = char:FindFirstChildOfClass("Humanoid")
+
+    if humanoid then
+        humanoid.HipHeight = 0
+        DConfiguration.Misc.PlayerAdjustment.Update.GroundAcceleration = 5
+        DFunctions.setBhopEnabled(false)
+    end
+end
+
+RunService.Heartbeat:Connect(function()
+    if DConfiguration.Misc.MovementModification.BHOP.Enabled == true then
+        pcall(DFunctions.BHOPFunction)
+    elseif DConfiguration.Misc.MovementModification.BHOP.Enabled == false then
+        pcall(DFunctions.ResetBHOP)
+    end
+end)
+
+local Toggle = Tabs.Misc:AddToggle("BHOPToggle", { Title = "BHOP (Button)", Default = false })
+
+Toggle:OnChanged(function(State)
+    if State then
+        DFunctions.CreateButton("BHOPGui", "Auto Jump: OFF", 0.15 + DConfiguration.Settings.GuiScale.AutoJump, 0.1 + DConfiguration.Settings.GuiScale.AutoJump, function(btn)
+            local currentStatus = not DConfiguration.Misc.MovementModification.BHOP.FloatingButton
+            DConfiguration.Misc.MovementModification.BHOP.FloatingButton = currentStatus
+            
+            if currentStatus then
+                btn.Text = "Auto Jump: ON"
+                btn.TextColor3 = Color3.fromRGB(100, 255, 100)
+                DFunctions.setBhopEnabled(true)
+                DFunctions.BHOPFunction()
+            else
+                btn.Text = "Auto Jump: OFF"
+                btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+                DFunctions.ResetBHOP()
+            end
+        end)
+    else
+        DFunctions.DestroyButton("BHOPGui")
+        DFunctions.ResetBHOP()
+    end
+end)
+
+local ToggleJump = Tabs.Misc:AddToggle("BHOPJumpButton", {Title = "BHOP (Jump Button)", Default = false })
+
+ToggleJump:OnChanged(function(State)
+      DConfiguration.Misc.MovementModification.BHOP.JumpButton = State
+end)
+
+if UserInputService.TouchEnabled then
+    local TouchGui = LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("TouchGui", 5)
+    local TouchControlFrame = TouchGui and TouchGui:WaitForChild("TouchControlFrame", 5)
+    local JumpButton = TouchControlFrame and TouchControlFrame:FindFirstChild("JumpButton")
+    
+    if JumpButton then
+        local isJumping = false
+
+        JumpButton.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.Touch and DConfiguration.Misc.MovementModification.BHOP.JumpButton then
+                if not isJumping then
+                    isJumping = true
+                    DConfiguration.Misc.MovementModification.BHOP.Enabled = true
+                end
+            end
+        end)
+
+        JumpButton.InputEnded:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.Touch and DConfiguration.Misc.MovementModification.BHOP.JumpButton and not DConfiguration.Misc.MovementModification.BHOP.FloatingButton then
+                if isJumping then
+                    isJumping = false
+                    DConfiguration.Misc.MovementModification.BHOP.Enabled = false
+                    task.spawn(DFunctions.ResetBHOP)
+                    task.wait(0.1)
+                    task.spawn(DFunctions.ResetBHOP)
+                end
+            end
+        end)
+    end
+end
+
+Tabs.Misc:AddInput("BHOPButtonSize", {
+    Title = "BHOP Gui Size",
+    Default = tostring(DConfiguration.Settings.GuiScale.AutoJump),
+    Placeholder = "0",
+    Numeric = true, 
+    Finished = false, 
+    Callback = function(Value)
+        local num = tonumber(Value)
+        if num then
+            DConfiguration.Settings.GuiScale.AutoJump = num * 0.01
+        else
+            DConfiguration.Settings.GuiScale.AutoJump = 0
+        end
+        
+        DFunctions.UpdateButton("BHOPGui", 0.15 + DConfiguration.Settings.GuiScale.AutoJump, 0.1 + DConfiguration.Settings.GuiScale.AutoJump)
+    end
+})
+
+local DropdownVersion = Tabs.Misc:AddDropdown("BHOPVersion", {
+    Title = "Select BHOP Version",
+    Values = {"Acceleration", "Ground Acceleration", "No Acceleration"},
+    Multi = false,
+    Default = 1,
+})
+
+DropdownVersion:OnChanged(function(Value)
+    DConfiguration.Misc.MovementModification.BHOP.Type = Value
+end)
+
+local DropdownType = Tabs.Misc:AddDropdown("JumpType", {
+    Title = "Select Jump Type",
+    Values = {"Simulated", "Realistic"},
+    Multi = false,
+    Default = 1,
+})
+
+DropdownType:OnChanged(function(Value)
+    DConfiguration.Misc.MovementModification.BHOP.JumpType = Value
+end)
+
+local ToggleBackward = Tabs.Misc:AddToggle("BackwardBHOP", {Title = "BHOP Backward", Default = false })
+
+ToggleBackward:OnChanged(function(State)
+    DConfiguration.Misc.MovementModification.BHOP.Backwards = State
+end)
+
+local ToggleSpider = Tabs.Misc:AddToggle("SpiderHop", {Title = "Spider Hop V1", Default = false })
+
+ToggleSpider:OnChanged(function(State)
+    DConfiguration.Misc.MovementModification.BHOP.SpiderHop = State
+end)
+
+Tabs.Misc:AddParagraph({
+    Title = "Spider Hop V2 Soon...",
+    Content = ""
+})
+
+Tabs.Misc:AddInput("BHOPAcceleration", {
+    Title = "BHOP Acceleration",
+    Description = "Negative Only",
+    Default = "-0.1",
+    Placeholder = "-1",
+    Numeric = false, 
+    Finished = false,
+    Callback = function(Value)
+        DConfiguration.Misc.MovementModification.BHOP.Acceleration = tonumber(Value) or -0.1
+    end
+})
+
+Tabs.Misc:AddParagraph({
+    Title = " ",
+    Content = ""
+})
+
+local ToggleAutoAcc = Tabs.Misc:AddToggle("BHOPAutoAccelerate", {Title = "Max Speed In Acceleration", Default = false })
+
+ToggleAutoAcc:OnChanged(function(State)
+    DConfiguration.Misc.MovementModification.BHOP.AutoAcceleration = State
+end)
+
+Tabs.Misc:AddInput("BHOPMaxSpeedAcc", {
+    Title = "Max Speed Acceleration",
+    Default = "70",
+    Placeholder = "70",
+    Numeric = false,
+    Finished = false,
+    Callback = function(Value)
+        DConfiguration.Misc.MovementModification.BHOP.MaxSpeed = tonumber(Value) or 70
+    end
+})
